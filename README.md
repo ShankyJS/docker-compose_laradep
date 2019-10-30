@@ -1,25 +1,44 @@
-# docker-compose_laradep
+# Docker docker-compose_laradep
 Laravel deployment using Docker Compose.
 
+## Getting Started
+
+These instructions will cover usage information and for the docker container 
+
+### Prerequisities
+
+
+In order to run this container you'll need docker installed.
+
+* [Windows](https://docs.docker.com/windows/started)
+* [OS X](https://docs.docker.com/mac/started/)
+* [Linux](https://docs.docker.com/linux/started/)
+
+also need composer 
+
+*[Composer](https://getcomposer.org/download/)
+
+### Usage
+
 ### First, let's setup our Laravel Application 
-```
+
+```shell
 ~$ laravel new laravel-app
 ~$ cd laravel-app
 ```
 
 ### Setting up a Ephimeral container to setup all the applications on the same image. 
 
-```
+```shell
 ~$ docker run --rm -v $(pwd):/App composer Install 
-```
+```shell
 Now we have to create the docker-compose.yml 
-```
+```shell
 ~$ vim docker-compose.yml 
-```
+```shell
 (vim for more pleasure...) 
 We have to setup the file like this: 
-
-```
+```shell
 version: '3'
 services:
 
