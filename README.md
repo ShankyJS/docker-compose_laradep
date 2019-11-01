@@ -22,23 +22,28 @@ also need composer
 
 ### First, let's setup our Laravel Application 
 
-```shell
+```
 ~$ laravel new laravel-app
 ~$ cd laravel-app
 ```
 
 ### Setting up a Ephimeral container to setup all the applications on the same image. 
 
-```shell
+
+```
 ~$ docker run --rm -v $(pwd):/App composer Install 
-```shell
+```
+
+
 Now we have to create the docker-compose.yml 
-```shell
+
+```
 ~$ vim docker-compose.yml 
-```shell
+```
 (vim for more pleasure...) 
 We have to setup the file like this: 
-```shell
+
+```
 version: '3'
 services:
 
